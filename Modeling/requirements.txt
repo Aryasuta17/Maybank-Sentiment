@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+plotly
+pillow
+wordcloud
+nltk
+Sastrawi
+emoji
+requests
