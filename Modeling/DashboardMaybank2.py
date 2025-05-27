@@ -16,7 +16,7 @@ import joblib
 import numpy as np
 
 BASE_DIR = os.path.dirname(__file__) 
-LOGO_PATH = os.path.join(BASE_DIR, "logo.png") 
+LOGO_PATH = os.path.join(BASE_DIR, "Logo.png") 
 MODEL_PATH = os.path.join(BASE_DIR, "sentiment_model.pkl")
 
 # Load sentiment stacked ensemble model
