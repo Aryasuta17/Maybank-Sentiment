@@ -15,7 +15,8 @@ from io import BytesIO
 import joblib
 import numpy as np
 
-BASE_DIR = os.path.dirname(__file__)  
+BASE_DIR = os.path.dirname(__file__) 
+LOGO_PATH = os.path.join(BASE_DIR, "logo.png") 
 MODEL_PATH = os.path.join(BASE_DIR, "sentiment_model.pkl")
 
 # Load sentiment stacked ensemble model
@@ -78,7 +79,7 @@ df = load_data(CSV_PATH)
 # Header with logo and title
 col_logo, col_title = st.columns([1, 9])
 with col_logo:
-    logo = Image.open("logo.png")
+    logo = Image.open(LOGO_PATH)
     st.image(logo, width=200)
 with col_title:
     st.markdown(
