@@ -72,7 +72,8 @@ def load_data(path: str) -> pd.DataFrame:
     return df
 
 # Main data load
-df = load_data('merged_all_real - FIX CSV BENER.csv')
+CSV_PATH   = os.path.join(BASE_DIR, "merged_all_real - FIX CSV BENER.csv")
+df = load_data(CSV_PATH)
 
 # Header with logo and title
 col_logo, col_title = st.columns([1, 9])
