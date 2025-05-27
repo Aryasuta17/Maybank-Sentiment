@@ -4,6 +4,7 @@ import plotly.express as px
 import plotly.io as pio
 import streamlit as st
 from PIL import Image
+import os, joblib
 
 # Import tambahan untuk wordcloud
 from wordcloud import WordCloud, STOPWORDS
@@ -14,8 +15,11 @@ from io import BytesIO
 import joblib
 import numpy as np
 
+BASE_DIR = os.path.dirname(__file__)  
+MODEL_PATH = os.path.join(BASE_DIR, "sentiment_model.pkl")
+
 # Load sentiment stacked ensemble model
-dt = joblib.load('sentiment_model.pkl')
+dt = joblib.load(MODEL_PATH)
 pipe = dt['pipeline']
 thresh_neg = dt['threshold']
 
